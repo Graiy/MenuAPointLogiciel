@@ -34,6 +34,9 @@ public class JsonReader{
 
             donneesList.forEach( emp -> parseDonneesObject((JSONObject) emp));
 
+            System.out.println(listeJoueur);
+            System.out.println(data);
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -47,6 +50,10 @@ public class JsonReader{
         //Créer le dico
         data.put(donnees.get("joueur").toString(), donnees);
         listeJoueur.add(donnees.get("joueur").toString());
+    }
+
+    public ArrayList<String> getListeJoueur(){
+        return listeJoueur;
     }
 
     public int getIndiceRestant(String joueur){
