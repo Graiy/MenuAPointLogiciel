@@ -18,6 +18,11 @@ public class DataController {
         this.ui = ui;
     }
 
+    @FXML
+    public void initialize(){
+
+    }
+
     public void comeBack(ActionEvent event){
         this.ui.switchSceneHome();
     }
