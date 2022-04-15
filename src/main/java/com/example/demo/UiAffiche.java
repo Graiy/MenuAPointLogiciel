@@ -24,7 +24,6 @@ public class UiAffiche {
         FXMLLoader fxmlLoaderHome = new FXMLLoader(getClass().getResource("homeScreen.fxml"));
         screenController.addScreen("home", fxmlLoaderHome, jr, this);
         for (String joueur : jr.getListeJoueur()) {
-            System.out.println(joueur);
             FXMLLoader fxmlLoaderData = new FXMLLoader(getClass().getResource("dataScreen.fxml"));
             this.screenController.addScreen(joueur, fxmlLoaderData, jr, this);
         }

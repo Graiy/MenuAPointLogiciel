@@ -59,14 +59,14 @@ public class JsonReader{
         return dataJoueur.get("indiceRestant").toString();
     }
 
-    public ArrayList getLvlFinis(String joueur){
+    public ArrayList<Boolean> getLvlFinis(String joueur){
         JSONObject dataJoueur = data.get(joueur);
-        return (ArrayList)dataJoueur.get("niveauxFinis");
+        return (ArrayList<Boolean>)dataJoueur.get("niveauxFinis");
     }
 
-    public ArrayList getIndiceNiveau(String joueur){
+    public ArrayList<Boolean> getIndiceNiveau(String joueur){
         JSONObject dataJoueur = data.get(joueur);
-        return (ArrayList) dataJoueur.get("indiceNiveau");
+        return (ArrayList<Boolean>) dataJoueur.get("indiceNiveau");
     }
 
     public ArrayList getEssais(String joueur){

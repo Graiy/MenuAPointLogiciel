@@ -6,11 +6,10 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DataController">
    <content>
       <GridPane fx:id="gridGeneral" focusTraversable="true" maxHeight="598.0" maxWidth="998.0" minHeight="598.0" minWidth="998.0" prefHeight="598.0" prefWidth="998.0">
         <columnConstraints>
@@ -106,23 +105,6 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
-                     <children>
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="4" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="5" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="6" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="7" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="8" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="9" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="10" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="11" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="12" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="13" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="14" />
-                     </children>
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
@@ -151,23 +133,6 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
-                     <children>
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="4" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="5" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="6" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="7" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="8" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="9" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="10" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="11" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="12" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="13" />
-                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="14" />
-                     </children>
                      <padding>
                         <Insets left="76.0" />
                      </padding>
@@ -193,23 +158,6 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 1 :" textAlignment="CENTER" wrappingWidth="200.0" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 2 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="1" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 3 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="2" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 4 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="3" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 5 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="4" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 6 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="5" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 7 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="6" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 8 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="7" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 9 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="8" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 10 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="9" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 11 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="10" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 12 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="11" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 13 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="12" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 14 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="13" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 15 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="14" />
-                     </children>
                   </GridPane>
                   <GridPane fx:id="krono" GridPane.columnIndex="4" GridPane.rowIndex="1">
                      <columnConstraints>
@@ -232,25 +180,8 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 1 :" textAlignment="CENTER" wrappingWidth="200.0" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 2 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="1" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 3 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="2" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 4 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="3" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 5 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="4" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 6 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="5" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 7 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="6" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 8 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="7" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 9 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="8" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 10 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="9" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 11 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="10" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 12 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="11" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 13 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="12" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 14 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="13" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 15 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="14" />
-                     </children>
                   </GridPane>
-                  <Button fx:id="retour" mnemonicParsing="false" text="Retour" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                  <Button fx:id="retour" mnemonicParsing="false" onAction="#comeBack" text="Retour" GridPane.columnIndex="4" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="120.0" />
                      </GridPane.margin>

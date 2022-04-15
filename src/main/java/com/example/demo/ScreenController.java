@@ -20,8 +20,8 @@ public class ScreenController {
         if(name == "home"){
             fxmlLoader.setControllerFactory(c-> new MenuAPointController(jr, ui));
         }
-        if(name == "data"){
-            fxmlLoader.setControllerFactory(c-> new DataController(jr, ui));
+        else{
+            fxmlLoader.setControllerFactory(c-> new DataController(jr, ui, name));
         }
 
         ScrollPane pane = fxmlLoader.load();
