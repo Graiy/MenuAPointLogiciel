@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+
+<ScrollPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MenuAPointController">
+   <content>
+      <ListView fx:id="listeBoutons" prefHeight="450.0" prefWidth="546.0" />
+   </content>
+   <padding>
+      <Insets left="20.0" right="20.0" top="20.0" />
+   </padding>
+</ScrollPane>

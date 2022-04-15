@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
+   <content>
+      <GridPane fx:id="gridGeneral" focusTraversable="true" maxHeight="598.0" maxWidth="998.0" minHeight="598.0" minWidth="998.0" prefHeight="598.0" prefWidth="998.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="195.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="482.0" minHeight="3.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="538.0" minHeight="10.0" prefHeight="501.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fx:id="playerName" strokeType="OUTSIDE" strokeWidth="0.0" text="PlayerName" wrappingWidth="200.13671875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="nbIndice" strokeType="OUTSIDE" strokeWidth="0.0" text="NbIndice" GridPane.rowIndex="1" />
+            <GridPane fx:id="gridResult" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="163.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="465.0" minHeight="10.0" prefHeight="453.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveaux Finis :" GridPane.columnIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Indices utilisés :" GridPane.columnIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre d'essais :" GridPane.columnIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Temps :" GridPane.columnIndex="4" />
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 1 :" textAlignment="CENTER" wrappingWidth="200.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 2 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 3 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 4 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 5 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="4" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 6 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 7 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="6" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 8 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 9 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="8" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 10 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="9" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 11 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="10" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 12 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="11" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 13 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="12" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 14 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="13" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 15 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="14" />
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="lvlFini" layoutX="10.0" layoutY="38.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="4" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="5" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="6" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="7" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="8" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="9" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="10" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="11" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="12" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="13" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="14" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="76.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane fx:id="lvlIndice" layoutX="208.0" layoutY="38.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="4" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="5" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="6" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="7" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="8" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="9" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="10" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="11" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="12" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="13" />
+                        <Circle fill="RED" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="14" />
+                     </children>
+                     <padding>
+                        <Insets left="76.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane fx:id="nbTry" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 1 :" textAlignment="CENTER" wrappingWidth="200.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 2 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 3 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 4 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 5 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="4" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 6 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 7 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="6" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 8 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 9 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="8" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 10 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="9" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 11 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="10" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 12 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="11" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 13 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="12" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 14 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="13" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 15 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="14" />
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="krono" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 1 :" textAlignment="CENTER" wrappingWidth="200.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 2 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 3 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 4 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 5 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="4" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 6 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 7 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="6" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 8 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 9 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="8" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 10 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="9" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 11 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="10" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 12 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="11" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 13 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="12" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 14 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="13" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau 15 :" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="14" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="retour" mnemonicParsing="false" text="Retour" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="120.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </GridPane>
+   </content>
+</ScrollPane>

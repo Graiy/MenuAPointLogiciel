@@ -12,14 +12,15 @@ import org.json.simple.parser.ParseException;
 
 public class JsonReader{
 
-    protected String nomJson;
-    protected Hashtable<String, JSONObject> data;
-    protected ArrayList<String> listeJoueur;
+    private String nomJson;
+    private Hashtable<String, JSONObject> data;
+    private ArrayList<String> listeJoueur;
 
     public JsonReader(){
         this.nomJson = "donnees.json";
         this.data = new Hashtable<String, JSONObject>();
         this.listeJoueur = new ArrayList<>();
+        readJson();
     }
 
     public void readJson(){
@@ -34,8 +35,8 @@ public class JsonReader{
 
             donneesList.forEach( emp -> parseDonneesObject((JSONObject) emp));
 
-            System.out.println(listeJoueur);
-            System.out.println(data);
+            //System.out.println(listeJoueur);
+            //System.out.println(data);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -56,9 +57,9 @@ public class JsonReader{
         return listeJoueur;
     }
 
-    public int getIndiceRestant(String joueur){
+    public String getIndiceRestant(String joueur){
         JSONObject dataJoueur = data.get(joueur);
-        return (int)dataJoueur.get("indiceRestant");
+        return dataJoueur.get("indiceRestant").toString();
     }
 
     public ArrayList getLvlFinis(String joueur){
