@@ -35,9 +35,6 @@ public class JsonReader{
 
             donneesList.forEach( emp -> parseDonneesObject((JSONObject) emp));
 
-            //System.out.println(listeJoueur);
-            //System.out.println(data);
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

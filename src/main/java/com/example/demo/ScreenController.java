@@ -1,8 +1,10 @@
 package com.example.demo;
 
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 public class ScreenController {
@@ -14,7 +16,15 @@ public class ScreenController {
         this.main = main;
     }
 
-    protected void addScreen(String name, ScrollPane pane){
+    protected void addScreen(String name, FXMLLoader fxmlLoader, JsonReader jr, UiAffiche ui) throws IOException {
+        if(name == "home"){
+            fxmlLoader.setControllerFactory(c-> new MenuAPointController(jr, ui));
+        }
+        if(name == "data"){
+            fxmlLoader.setControllerFactory(c-> new DataController(jr, ui));
+        }
+
+        ScrollPane pane = fxmlLoader.load();
         screenMap.put(name, pane);
     }
 

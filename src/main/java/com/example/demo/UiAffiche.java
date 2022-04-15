@@ -17,19 +17,27 @@ public class UiAffiche {
         this.jr = jr;
         //MenuAPointController mpc = new MenuAPointController(jr);
         FXMLLoader fxmlLoader = new FXMLLoader(MenuAPointApplication.class.getResource("homeScreen.fxml"));
-        fxmlLoader.setControllerFactory(c->{return new MenuAPointController(jr);});
+        fxmlLoader.setControllerFactory(c-> new MenuAPointController(jr, this));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
         this.screenController = new ScreenController(scene);
         //screenController.addScreen("home", FXMLLoader.load(getClass().getResource("homeScreen.fxml")));
+        FXMLLoader fxmlLoaderHome = new FXMLLoader(getClass().getResource("homeScreen.fxml"));
+        screenController.addScreen("home", fxmlLoaderHome, jr, this);
         for (String joueur : jr.getListeJoueur()) {
-            screenController.addScreen(joueur, FXMLLoader.load(getClass().getResource("dataScreen.fxml")));
+            System.out.println(joueur);
+            FXMLLoader fxmlLoaderData = new FXMLLoader(getClass().getResource("dataScreen.fxml"));
+            this.screenController.addScreen(joueur, fxmlLoaderData, jr, this);
         }
         st.setTitle("Menu A Point Data Reader");
         st.setScene(scene);
         st.show();
     }
 
-    public void switchScene() throws IOException {
+    public void switchSceneData(String name){
+        this.screenController.activate(name);
+    }
 
+    public void switchSceneHome(){
+        this.screenController.activate("home");
     }
 }

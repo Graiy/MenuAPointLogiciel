@@ -13,9 +13,11 @@ public class MenuAPointController {
     private ListView<Button> listeBoutons;
     private ObservableList<Button> buttons = FXCollections.observableArrayList();
     private JsonReader jr;
+    private UiAffiche ui;
 
-    public MenuAPointController(JsonReader jr){
+    public MenuAPointController(JsonReader jr, UiAffiche ui){
         this.jr = jr;
+        this.ui = ui;
     }
 
     @FXML
@@ -35,6 +37,6 @@ public class MenuAPointController {
     }
 
     public void click(String name){
-        System.out.println(jr.getEssais(name));
+        this.ui.switchSceneData(name);
     }
 }
