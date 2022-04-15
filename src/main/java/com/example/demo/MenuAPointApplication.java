@@ -1,16 +1,22 @@
 package com.example.demo;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 public class MenuAPointApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        JsonReader jr = new JsonReader();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Json File");
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Json", "*.json")); //Oblige à ne voir que les .json
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        String path = selectedFile.getAbsolutePath();
+        System.out.println("C'est le chemin : " + path);
+        JsonReader jr = new JsonReader(path);
         UiAffiche ui = new UiAffiche(stage, jr);
     }
 

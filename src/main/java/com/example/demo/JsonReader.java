@@ -16,8 +16,8 @@ public class JsonReader{
     private Hashtable<String, JSONObject> data;
     private ArrayList<String> listeJoueur;
 
-    public JsonReader(){
-        this.nomJson = "donnees.json";
+    public JsonReader(String path){
+        this.nomJson = path;
         this.data = new Hashtable<String, JSONObject>();
         this.listeJoueur = new ArrayList<>();
         readJson();
