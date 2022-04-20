@@ -16,16 +16,39 @@ public class ScreenController {
         this.main = main;
     }
 
-    protected void addScreen(String name, FXMLLoader fxmlLoader, JsonReader jr, UiAffiche ui) throws IOException {
-        if(name == "home"){
-            fxmlLoader.setControllerFactory(c-> new MenuAPointController(jr, ui));
+    protected void addScreen(String name, FXMLLoader fxmlLoader, JsonReader jr, UiAffiche ui, String typeScreen) throws IOException {
+        switch(typeScreen){
+            case "home" :
+                fxmlLoader.setControllerFactory(c-> new MenuAPointController(jr, ui));
+                ScrollPane pane = fxmlLoader.load();
+                screenMap.put(name, pane);
+                break;
+            case "data" :
+                fxmlLoader.setControllerFactory(c-> new DataController(jr, ui, name));
+                ScrollPane paneData = fxmlLoader.load();
+                screenMap.put(name, paneData);
+                break;
         }
-        else{
-            fxmlLoader.setControllerFactory(c-> new DataController(jr, ui, name));
-        }
+    }
 
-        ScrollPane pane = fxmlLoader.load();
-        screenMap.put(name, pane);
+    protected void addScreen(String nameJoueur, String nameLvl, FXMLLoader fxmlLoader, JsonReader jr, UiAffiche ui, String typeScreen) throws IOException {
+        switch(typeScreen){
+            case "home" :
+                fxmlLoader.setControllerFactory(c-> new MenuAPointController(jr, ui));
+                ScrollPane pane = fxmlLoader.load();
+                screenMap.put(nameJoueur, pane);
+                break;
+            case "data" :
+                fxmlLoader.setControllerFactory(c-> new DataController(jr, ui, nameJoueur));
+                ScrollPane paneData = fxmlLoader.load();
+                screenMap.put(nameJoueur, paneData);
+                break;
+            case "bonus" :
+                fxmlLoader.setControllerFactory(c-> new BonusController(jr, ui, nameLvl, nameJoueur));
+                ScrollPane paneBonus = fxmlLoader.load();
+                screenMap.put(nameLvl, paneBonus);
+                break;
+        }
     }
 
     protected void removeScreen(String name){

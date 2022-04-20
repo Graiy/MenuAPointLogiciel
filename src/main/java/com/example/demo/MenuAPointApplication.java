@@ -15,7 +15,6 @@ public class MenuAPointApplication extends Application {
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Json", "*.json")); //Oblige à ne voir que les .json
         File selectedFile = fileChooser.showOpenDialog(stage);
         String path = selectedFile.getAbsolutePath();
-        System.out.println("C'est le chemin : " + path);
         JsonReader jr = new JsonReader(path);
         UiAffiche ui = new UiAffiche(stage, jr);
     }

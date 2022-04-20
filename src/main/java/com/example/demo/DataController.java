@@ -1,7 +1,12 @@
 package com.example.demo;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
@@ -23,10 +28,13 @@ public class DataController {
     private GridPane nbTry;
     @FXML
     private GridPane krono;
+    @FXML
+    private ListView nivBonus;
 
     private JsonReader jr;
     private UiAffiche ui;
     private String name;
+    private ObservableList<Button> buttons = FXCollections.observableArrayList();
 
     public DataController(JsonReader jr, UiAffiche ui, String name){
         this.jr = jr;
@@ -64,11 +72,28 @@ public class DataController {
 
         //Ecrit le temps pris par niveau
         for(int i=0; i<jr.getKrono(name).size(); i++){
-            krono.add(new Text(jr.getKrono(name).get(i).toString()), 0, i);
+            int toNum = ((Integer.parseInt(jr.getKrono(name).get(i).toString()))/60);
+            krono.add(new Text(String.valueOf(toNum)), 0, i);
+        }
+
+        nivBonus.setItems(buttons);
+        for(int i=0; i<this.jr.getListeBonusJoueur(name).size(); i++){
+            addButton(this.jr.getListeBonusJoueur(name).get(i));
         }
     }
 
-    public void comeBack(ActionEvent event){
+    public void comeBack(){
         this.ui.switchSceneHome();
+    }
+
+    @FXML
+    public void addButton(String j){
+        Button b = new Button(j);
+        buttons.add(b);
+        b.addEventHandler(MouseEvent.MOUSE_CLICKED, (event -> clickNivBonus(b.getText())));
+    }
+
+    public void clickNivBonus(String name){
+        this.ui.switchBonusLevel(name);
     }
 }

@@ -15,11 +15,15 @@ public class JsonReader{
     private String nomJson;
     private Hashtable<String, JSONObject> data;
     private ArrayList<String> listeJoueur;
+    private Set<String> setBonusLevel;
+    private Hashtable<String, ArrayList<String>> listLvlBonusPerPlayer;
 
     public JsonReader(String path){
         this.nomJson = path;
         this.data = new Hashtable<String, JSONObject>();
         this.listeJoueur = new ArrayList<>();
+        setBonusLevel = new HashSet<>();
+        listLvlBonusPerPlayer = new Hashtable<>();
         readJson();
     }
 
@@ -34,6 +38,9 @@ public class JsonReader{
             JSONArray donneesList = (JSONArray) jsonObject.get("donnees");
 
             donneesList.forEach( emp -> parseDonneesObject((JSONObject) emp));
+            for (String joueur:this.listeJoueur) {
+                this.createListeBonus(joueur);
+            }
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -77,5 +84,46 @@ public class JsonReader{
     public ArrayList getKrono(String joueur){
         JSONObject dataJoueur = data.get(joueur);
         return (ArrayList) dataJoueur.get("chronoNiveau");
+    }
+
+    public void createListeBonus(String joueur){
+        JSONObject obj = (JSONObject) data.get(joueur).get("niveauxBonusFinis");
+        System.out.println(obj);
+        ArrayList<String> array = new ArrayList<>();
+        for(Object o : obj.keySet()) {
+            array.add(o.toString());
+        }
+        listLvlBonusPerPlayer.put(joueur, array);
+    }
+
+    public ArrayList<String> getListeBonusJoueur(String joueur){
+        return listLvlBonusPerPlayer.get(joueur);
+    }
+    public Boolean getLvlBonusFini(String joueur, String key){
+        JSONObject obj = (JSONObject) data.get(joueur).get("niveauxBonusFinis");
+        return (Boolean) obj.get(key);
+    }
+
+    public Boolean getIndiceBonus(String joueur, String key){
+        JSONObject obj = (JSONObject) data.get(joueur).get("indiceBonus");
+        return (Boolean) obj.get(key);
+    }
+
+    public String getEssaisBonus(String joueur, String key){
+        JSONObject obj = (JSONObject) data.get(joueur).get("essaiesBonus");
+        if (obj.isEmpty()){
+            return null;
+        }else {
+            return obj.get(key).toString();
+        }
+    }
+
+    public String getKronoBonus(String joueur, String key){
+        JSONObject obj = (JSONObject) data.get(joueur).get("chronoNiveauBonus");
+        if (obj.isEmpty()){
+            return null;
+        }else {
+            return obj.get(key).toString();
+        }
     }
 }

@@ -8,6 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 
+import java.io.IOException;
+
 public class MenuAPointController {
     @FXML
     private ListView<Button> listeBoutons;
@@ -38,5 +40,9 @@ public class MenuAPointController {
 
     public void click(String name){
         this.ui.switchSceneData(name);
+    }
+    @FXML
+    public void loadNewFile() throws IOException {
+        this.ui.newScreen();
     }
 }
