@@ -32,10 +32,13 @@ public class JsonReader{
 
         try (FileReader reader = new FileReader(this.nomJson)){
 
-            Object obj = jsonParser.parse(reader);
+            JSONObject obj = (JSONObject) jsonParser.parse(reader);
 
-            JSONObject jsonObject = (JSONObject) obj;
-            JSONArray donneesList = (JSONArray) jsonObject.get("donnees");
+            JSONObject obj2 = (JSONObject) obj.get("joueurs");
+            ArrayList<JSONObject> donneesList = new ArrayList<>();
+            for(Object o : obj2.keySet()) {
+                donneesList.add((JSONObject)((JSONObject) obj.get("joueurs")).get(o));
+            }
 
             donneesList.forEach( emp -> parseDonneesObject((JSONObject) emp));
             for (String joueur:this.listeJoueur) {
@@ -88,7 +91,6 @@ public class JsonReader{
 
     public void createListeBonus(String joueur){
         JSONObject obj = (JSONObject) data.get(joueur).get("niveauxBonusFinis");
-        System.out.println(obj);
         ArrayList<String> array = new ArrayList<>();
         for(Object o : obj.keySet()) {
             array.add(o.toString());
